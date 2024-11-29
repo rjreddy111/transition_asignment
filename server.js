@@ -51,7 +51,7 @@ app.get("/", async(req,res)=> {
     //Checking each rule
     const outputResults = checkRulesSet.map((rules)=> ({
         name : rules.name , 
-        currentStatus : rules.condition(data)? "Pass" : "Fail"
+        currentStatus : rules.condition(data)? "Passed" : "Failed"
     })
 )
     res.render("index", {outputResults})

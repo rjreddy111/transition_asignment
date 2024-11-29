@@ -1,0 +1,16 @@
+steps to setup :
+1. Run command "npm init -y" 
+2. Install dependencies using command "npm install express path ejs-lint" 
+3. "node server.js" command to run the server 
+
+
+Deployed link : "https://transition-asignment.onrender.com"
+
+Additional info: 
+1. CheckList rules as been added to check whether the status is passed or failed
+2. Used ejs to embedded javascript template, allowing javascript to generate HTML.
+3. We can add more checklist rules to the "server.js" file where i mentioned "checkRulesSet"
+
+
+contact information : 
+email : "rjreddy111@gmail.com" for any querries 
