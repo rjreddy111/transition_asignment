@@ -13,8 +13,11 @@ app.set('views', path.join(__dirname, 'views'));
 
 const url = "http://qa-gb.api.dynamatix.com:3100/api/applications/getApplicationById/67339ae56d5231c1a2c63639"
 
+// calculating LVT
 const calculateLVT = (loanRequired,purchasePrice) => (loanRequired/purchasePrice)*100
 
+
+//checklist rules
 const checkRulesSet = [
 
     {
@@ -45,9 +48,10 @@ app.get("/", async(req,res)=> {
     const data = await resData.json()
     console.log(data)
 
+    //Checking each rule
     const outputResults = checkRulesSet.map((rules)=> ({
         name : rules.name , 
-        currentStatus : rules.condition(data)? "pass" : "fail"
+        currentStatus : rules.condition(data)? "Pass" : "Fail"
     })
 )
     res.render("index", {outputResults})
